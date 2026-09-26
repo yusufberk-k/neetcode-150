@@ -2,13 +2,6 @@
 
 My solutions to the [NeetCode 150](https://neetcode.io/roadmap) list.
 
-## Language
-
-C++ for the early problems, Python from #271 onward. C++ turned each
-solution into buffer and type handling instead of the algorithm, and
-Python is the main language in cloud security and DevSecOps anyway,
-which is the track I am on.
-
 ## Status tags
 
 Every file starts with a status comment:
@@ -19,7 +12,7 @@ Every file starts with a status comment:
 | `hint` | Got stuck, took a hint, wrote the rest myself |
 | `looked` | Read the solution |
 
-Anything tagged `looked` gets a retry date. On that date I rewrite it
+Anything tagged `looked` or `hint` gets a retry date. On that date I rewrite it
 from scratch without opening the file. If it passes, the tag becomes
 `solo` and the commit message says `retry passed`.
 
@@ -48,4 +41,4 @@ Add 347. Top K Frequent Elements (max-heap O(n log n), bucket sort O(n))
 
 ## Pace
 
-6 problems a week through the list, then 4 a week on review afterwards.
+1 problem a day through the list, then 5 a week on review afterwards.
