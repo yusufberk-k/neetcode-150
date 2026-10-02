@@ -42,3 +42,17 @@ Add 347. Top K Frequent Elements (max-heap O(n log n), bucket sort O(n))
 ## Pace
 
 1 problem a day through the list, then 5 a week on review afterwards.
+
+## Retry queue
+
+Sorted by date. A row is removed when the retry passes and the tag becomes `solo`.
+
+| Retry date | Problem | Status | File |
+|---|---|---|---|
+| 2026-09-22 | 271. Encode and Decode Strings | `looked` | [arrays-hashing/encode-and-decode-strings.py](arrays-hashing/encode-and-decode-strings.py) |
+| 2026-09-28 | 15. 3Sum | `looked` | [two-pointers/threeSum.py](two-pointers/threeSum.py) |
+| 2026-10-07 | 11. Container With Most Water | `hint` | [two-pointers/container-with-most-water.py](two-pointers/container-with-most-water.py) |
+| 2026-10-07 | 42. Trapping Rain Water | `hint` | [two-pointers/trapping-rain-water.py](two-pointers/trapping-rain-water.py) |
+| 2026-10-08 | 155. Min Stack | `hint` | [stack/min-stack.py](stack/min-stack.py) |
+| 2026-10-09 | 150. Evaluate Reverse Polish Notation | `hint` | [stack/evaluate-reverse-polish-notation.py](stack/evaluate-reverse-polish-notation.py) |
+| 2026-10-09 | 238. Product of Array Except Self | `hint` | [arrays-hashing/products-of-array-except-self.py](arrays-hashing/products-of-array-except-self.py) |
