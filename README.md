@@ -49,7 +49,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-09-28 | 15. 3Sum | `looked` | [two-pointers/threeSum.py](two-pointers/threeSum.py) |
 | 2026-10-07 | 11. Container With Most Water | `hint` | [two-pointers/container-with-most-water.py](two-pointers/container-with-most-water.py) |
 | 2026-10-07 | 42. Trapping Rain Water | `hint` | [two-pointers/trapping-rain-water.py](two-pointers/trapping-rain-water.py) |
 | 2026-10-08 | 155. Min Stack | `hint` | [stack/min-stack.py](stack/min-stack.py) |
