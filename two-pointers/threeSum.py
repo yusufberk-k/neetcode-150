@@ -1,30 +1,25 @@
 # 3Sum
-# status: looked | retry: 2026-09-28
-# note: missed reducing to Two Sum II by fixing one element; 
-# first try never moved l/r (infinite loop), then deduped by index instead of value
-
+# status: solo | retry: -
+# note: retry passed 
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
-        triplets = []
-        m = 1
+        
         seen = set()
-        while m < len(nums) - 1:
-            l, r = 0, len(nums)-1
-            
-            while l < m and m < r:
-                target = -nums[m]
-                if nums[l] + nums[r] > target:
+        triplets = []
+        for m in range(1, len(nums)-1):
+            l, r = 0, len(nums) - 1
+            target = -nums[m]
+            while l < m and r > m:
+                if target < nums[l] + nums[r]:
                     r -= 1
-                elif nums[l] + nums[r] < target:
+                elif target > nums[l] + nums[r]:
                     l += 1
                 else:
-                    if (nums[l],nums[r]) not in seen:
-                        triplets.append([nums[l],nums[m],nums[r]])
-                        seen.add((nums[l],nums[r]))
-
-                    l+=1
-                    r-=1
-            m += 1
+                    if (nums[l], nums[r]) not in seen:
+                        seen.add((nums[l], nums[r]))
+                        triplets.append([nums[l], nums[m], nums[r]])
+                    r -= 1
+                    l += 1
         return triplets
