@@ -55,3 +55,4 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 | 2026-10-09 | 150. Evaluate Reverse Polish Notation | `hint` | [stack/evaluate-reverse-polish-notation.py](stack/evaluate-reverse-polish-notation.py) |
 | 2026-10-09 | 238. Product of Array Except Self | `hint` | [arrays-hashing/products-of-array-except-self.py](arrays-hashing/products-of-array-except-self.py) |
 | 2026-10-11 | 84. Largest Rectangle in Histogram | `hint` | [stack/largest-rectangle-in-histogram.py](stack/largest-rectangle-in-histogram.py) |
+| 2026-10-11 | 424. Longest Repeating Character Replacement | `looked` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
