@@ -1,23 +1,22 @@
 # Longest Consecutive Sequence
-# status: hint | retry: 2026-09-29
-# note: only start counting from a sequence head (num - 1 not in set). 
-# Without that check every element restarts a scan and it degrades to O(n^2).
+# status: solo | retry: -
+# note: retry passed, first try TLE'd from looping over nums instead of seen;
+# a duplicated head re-scans the whole run every time (0 x50k + 1..49999 -> 150s). loop over the set.
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        num_set = set()
-        for num in nums:
-            num_set.add(num)
+        seen = set()
 
-        
-        max_seq = 0
-        for num in num_set:
-            if num-1 not in num_set:
-                st = num
-                seq = 0
-                while st in num_set:
-                    seq += 1
-                    st += 1
-                max_seq = max(max_seq, seq)
-            
-        return max_seq
+        for n in nums:
+            seen.add(n)
+
+        ml = 0
+        for n in seen:
+            if n-1 not in seen:
+                l = 0
+                i = n
+                while i in seen:
+                    i += 1
+                    l += 1
+                ml = max(l, ml)
+        return ml
