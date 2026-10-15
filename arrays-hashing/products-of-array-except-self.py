@@ -1,5 +1,5 @@
 # Product of Array Except Self
-# status: hint | retry: -
+# status: hint | retry: 2026-09-28
 # note: missed that output[i] = left product * right product, got stuck on division
 # suff is filled in reverse: suff[k] = product of last k elements, hence suff[n-1-i]
 

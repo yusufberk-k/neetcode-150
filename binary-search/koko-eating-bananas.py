@@ -1,5 +1,5 @@
 # Koko Eating Bananas
-# status: looked | retry: 2026-10-22
+# status: looked | retry: 2026-10-18
 # note: binary search on the answer (speed in 1..max(piles)), not on the array;
 # if hours <= h, save m and go left to find a smaller speed
 

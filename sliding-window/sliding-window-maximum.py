@@ -1,5 +1,5 @@
 # Sliding Window Maximum
-# status: looked | retry: 2026-10-18
+# status: looked | retry: 2026-10-14
 # note: keep the running max, re-sort the window only when the max slides out (O(nk log k) worst case);
 # optimal is a monotonic decreasing deque of indices, O(n)
 

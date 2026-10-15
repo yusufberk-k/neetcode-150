@@ -1,5 +1,5 @@
 # Longest Consecutive Sequence
-# status: hint | retry: -
+# status: hint | retry: 2026-09-29
 # note: only start counting from a sequence head (num - 1 not in set). 
 # Without that check every element restarts a scan and it degrades to O(n^2).
 

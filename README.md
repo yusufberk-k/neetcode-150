@@ -12,7 +12,8 @@ Every file starts with a status comment:
 | `hint` | Got stuck, took a hint, wrote the rest myself |
 | `looked` | Read the solution |
 
-Anything tagged `looked` or `hint` gets a retry date. On that date I rewrite it
+Anything tagged `looked` or `hint` gets a retry date: 7 days after solving for
+`hint`, 3 days for `looked`. On that date I rewrite it
 from scratch without opening the file. If it passes, the tag becomes
 `solo` and the commit message says `retry passed`.
 
@@ -49,15 +50,16 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
+| 2026-09-28 | 238. Product of Array Except Self | `hint` | [arrays-hashing/products-of-array-except-self.py](arrays-hashing/products-of-array-except-self.py) |
+| 2026-09-29 | 128. Longest Consecutive Sequence | `hint` | [arrays-hashing/longest-consecutive-sequence.py](arrays-hashing/longest-consecutive-sequence.py) |
 | 2026-10-07 | 11. Container With Most Water | `hint` | [two-pointers/container-with-most-water.py](two-pointers/container-with-most-water.py) |
 | 2026-10-07 | 42. Trapping Rain Water | `hint` | [two-pointers/trapping-rain-water.py](two-pointers/trapping-rain-water.py) |
 | 2026-10-08 | 155. Min Stack | `hint` | [stack/min-stack.py](stack/min-stack.py) |
 | 2026-10-09 | 150. Evaluate Reverse Polish Notation | `hint` | [stack/evaluate-reverse-polish-notation.py](stack/evaluate-reverse-polish-notation.py) |
-| 2026-10-09 | 238. Product of Array Except Self | `hint` | [arrays-hashing/products-of-array-except-self.py](arrays-hashing/products-of-array-except-self.py) |
 | 2026-10-11 | 84. Largest Rectangle in Histogram | `hint` | [stack/largest-rectangle-in-histogram.py](stack/largest-rectangle-in-histogram.py) |
 | 2026-10-11 | 424. Longest Repeating Character Replacement | `looked` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
 | 2026-10-13 | 76. Minimum Window Substring | `looked` | [sliding-window/minimum-window-substring.py](sliding-window/minimum-window-substring.py) |
+| 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
 | 2026-10-17 | 567. Permutation in String | `hint` | [sliding-window/permutation-in-string.py](sliding-window/permutation-in-string.py) |
-| 2026-10-18 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
+| 2026-10-18 | 875. Koko Eating Bananas | `looked` | [binary-search/koko-eating-bananas.py](binary-search/koko-eating-bananas.py) |
 | 2026-10-21 | 74. Search a 2D Matrix | `hint` | [binary-search/search-a-2d-matrix.py](binary-search/search-a-2d-matrix.py) |
-| 2026-10-22 | 875. Koko Eating Bananas | `looked` | [binary-search/koko-eating-bananas.py](binary-search/koko-eating-bananas.py) |
