@@ -1,26 +1,23 @@
 # Product of Array Except Self
-# status: hint | retry: 2026-09-28
-# note: missed that output[i] = left product * right product, got stuck on division
-# suff is filled in reverse: suff[k] = product of last k elements, hence suff[n-1-i]
+# status: solo | retry: -
+# note: retry passed, suff filled at its own index so no n-1-i mapping needed;
+# O(1) extra space follow-up (reuse output as pref, running suffix var) not done yet
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        pref = [1]
-        suff = [1]
-        pref_product = 1
-        suff_product = 1
-        products = []
-        for i in range(1,len(nums)):
-            pref_product *= nums[i-1]
+        pref = [0] * len(nums)
+        suff = [0] * len(nums)
+        
+        s = 1
+        for i, n in enumerate(nums):
             
-            pref.append(pref_product)
+            pref[i] = s
+            s *= n
 
-        for i in range (len(nums)-2, -1, -1):
-            suff_product *= nums[i+1]
-            suff.append(suff_product)
+        s = 1
+        for i in range(len(nums)-1, -1, -1):
+            
+            suff[i] = s
+            s *= nums[i]
 
-
-        for i in range(0, len(nums)):
-            products.append(pref[i]*suff[len(nums)-1-i])
-
-        return products
+        return [pref[i] * suff[i] for i in range(len(nums))]
