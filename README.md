@@ -50,7 +50,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-09-28 | 238. Product of Array Except Self | `hint` | [arrays-hashing/products-of-array-except-self.py](arrays-hashing/products-of-array-except-self.py) |
 | 2026-09-29 | 128. Longest Consecutive Sequence | `hint` | [arrays-hashing/longest-consecutive-sequence.py](arrays-hashing/longest-consecutive-sequence.py) |
 | 2026-10-07 | 11. Container With Most Water | `hint` | [two-pointers/container-with-most-water.py](two-pointers/container-with-most-water.py) |
 | 2026-10-07 | 42. Trapping Rain Water | `hint` | [two-pointers/trapping-rain-water.py](two-pointers/trapping-rain-water.py) |
