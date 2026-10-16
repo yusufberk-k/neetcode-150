@@ -50,7 +50,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-10-09 | 150. Evaluate Reverse Polish Notation | `hint` | [stack/evaluate-reverse-polish-notation.py](stack/evaluate-reverse-polish-notation.py) |
 | 2026-10-11 | 84. Largest Rectangle in Histogram | `hint` | [stack/largest-rectangle-in-histogram.py](stack/largest-rectangle-in-histogram.py) |
 | 2026-10-11 | 424. Longest Repeating Character Replacement | `looked` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
 | 2026-10-13 | 76. Minimum Window Substring | `looked` | [sliding-window/minimum-window-substring.py](sliding-window/minimum-window-substring.py) |
