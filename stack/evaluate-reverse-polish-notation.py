@@ -1,5 +1,5 @@
 # Evaluate Reverse Polish Notation
-# status: hint | retry: 2026-10-09
+# status: solo | retry: -
 # note: // floors toward -inf (-7 // 2 = -4), problem wants truncation toward zero, so use int(a / b)
 
 class Solution:
