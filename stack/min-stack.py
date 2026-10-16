@@ -1,27 +1,27 @@
 # Min Stack
-# status: hint | retry: 2026-10-08
-# note: single min var can't recover the previous min after pop; 
-# keep a history of min indices (no sentinel, no duplicate state)
+# status: solo | retry: -
+# note: retry passed; switched from min indices to a value-based min stack with an inf sentinel (no empty check);
+# push on >= so duplicate mins survive a pop
 
 class MinStack:
-    
+
     def __init__(self):
-        self.stack = []
-        self.minIns = []
+        inf = float('inf')
+        self.st = []
+        self.mins = [inf]
+
     def push(self, val: int) -> None:
-        self.stack.append(val)
-        if len(self.minIns) == 0:
-            self.minIns.append(0)
-        elif val <= self.stack[self.minIns[-1]]:               
-            self.minIns.append(len(self.stack) - 1)
+        self.st.append(val)
+        if self.mins[-1] >= val:
+            self.mins.append(val) 
 
     def pop(self) -> None:
-        if self.stack[self.minIns[-1]] == self.stack[-1]:
-            self.minIns.pop()
-        self.stack.pop()
+        n = self.st.pop()
+        if n == self.mins[-1]:
+            self.mins.pop()
 
     def top(self) -> int:
-        return self.stack[-1]
+        return self.st[-1]
 
     def getMin(self) -> int:
-        return self.stack[self.minIns[-1]]
+        return self.mins[-1]
