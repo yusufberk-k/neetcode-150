@@ -1,35 +1,36 @@
 # Largest Rectangle in Histogram
-# status: hint | retry: 2026-10-11
-# note: couldn't see how to get both boundaries from a stack; 
-# monotonic increasing stack, popper = right boundary, run it reversed for left
+# status: solo | retry: -
+# note: retry passed; monotonic increasing stack, popper = right boundary, run it reversed for left;
+# n / -1 sentinels drop the leftover-stack loops. if/else was redundant again, just while-pop then append
 
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
-        st = []
-        pref = [0] * len(heights)
-        suff = [0] * len(heights)
-
-        for i in range(len(heights)):
-            while len(st) != 0 and heights[st[-1]] > heights[i]:
-                pref[st[-1]] = i-1
-                st.pop()
-            st.append(i)
-
-        while len(st) != 0:
-            pref[st[-1]] = len(heights) - 1
-            st.pop()
+        pref = [len(heights)] * len(heights)
+        suff = [-1] * len(heights)
         
+        pst = []
+        for i,n in enumerate(heights):
+            if len(pst) == 0 or heights[pst[-1]] <= n:
+                pst.append(i)
 
+            else:
+                while len(pst) != 0 and heights[pst[-1]] > n:
+                    pref[pst.pop()] = i
+                pst.append(i)
+
+        sst = []
         for i in range(len(heights)-1, -1, -1):
-            while len(st) != 0 and heights[st[-1]] > heights[i]:
-                suff[st[-1]] = i+1
-                st.pop()
-            st.append(i)
-        
-        while len(st) != 0:
-            suff[st[-1]] = 0
-            st.pop()
+            if len(sst) == 0 or heights[sst[-1]] <= heights[i]:
+                sst.append(i)
 
-        areas = [(pref[i] - suff[i] + 1)*heights[i] for i in range(len(heights))]
+            else:
+                while len(sst) != 0 and heights[sst[-1]] > heights[i]:
+                    suff[sst.pop()] = i
+                sst.append(i)
 
-        return max(areas)
+        lr = 0
+        for i in range(len(heights)):
+            r = (pref[i]-suff[i]-1)*heights[i]
+            lr = max(lr, r)
+
+        return lr
