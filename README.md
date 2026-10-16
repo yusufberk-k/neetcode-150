@@ -50,7 +50,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-10-11 | 84. Largest Rectangle in Histogram | `hint` | [stack/largest-rectangle-in-histogram.py](stack/largest-rectangle-in-histogram.py) |
 | 2026-10-11 | 424. Longest Repeating Character Replacement | `looked` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
 | 2026-10-13 | 76. Minimum Window Substring | `looked` | [sliding-window/minimum-window-substring.py](sliding-window/minimum-window-substring.py) |
 | 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
