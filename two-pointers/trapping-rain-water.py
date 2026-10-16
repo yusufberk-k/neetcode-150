@@ -1,27 +1,31 @@
 # Trapping Rain Water
-# status: hint | retry: 2026-10-07
-# note: missed the core idea: water at i = min(max left, max right) - height[i]; prefix/suffix max arrays give it in O(n)
+# status: solo | retry: -
+# note: retry passed; excluded i from pref/suff max fearing it'd break,
+# but including it is fine: min(pref, suff) >= height[i] so water never goes negative, no `if a > 0` or edge skipping needed
 
 class Solution:
     def trap(self, height: List[int]) -> int:
-        l, r = 0, len(height)-1
-        suffix = [0] * len(height)
-        prefix = []
+        pref = [0] * len(height)
+        suff = [0] * len(height)
 
-        max_suffix = 0
-        for i in range(len(height)-1, -1 ,-1):
-            max_suffix = max(max_suffix, height[i])
-            suffix[i] = max_suffix
+        mp = 0
+        for i in range(1, len(height)-1):
+            p = height[i-1]
+            mp = max(mp, p)
+            pref[i] = mp
 
-        max_prefix = 0
-        for i in range(len(height)):
-            max_prefix = max(max_prefix, height[i])
-            prefix.append(max_prefix)
-
-        total_water = 0
-        for i in range(len(height)):
-            water = min(prefix[i], suffix[i]) - height[i]
-            total_water += water
-
-        return total_water
         
+        ms = 0
+        for i in range(len(height)-2, 0, -1):
+            s = height[i+1]
+            ms = max(ms, s)
+            suff[i] = ms
+
+
+        ta = 0
+        for i in range(1, len(height)-1):
+            a = min(pref[i], suff[i]) - height[i]
+            if a > 0:
+                ta += a
+
+        return ta
