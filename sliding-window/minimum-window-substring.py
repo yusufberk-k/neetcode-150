@@ -1,40 +1,36 @@
 # Minimum Window Substring
-# status: looked | retry: 2026-10-13
-# note: need/have counters with shrink-while-valid; 
-# decrement have before removing s[l] from the window
+# status: solo | retry: -
+# note: retry passed; need/have counters, shrink while valid, k only moves when fs crosses f exactly;
+# chars not in t have f = 0 so no f > 0 check needed. use r-l+1 for length, not len(s[l:r+1])
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        need = 0
-        
+        ms = ''
+        ml = float('inf')
         f = [0] * 128
-        for i in t:
-            ind = ord(i)
-            f[ind] += 1
-        
-        for j in f:
-            if j > 0:
-                need += 1
-        
-        fs = [0] * 128
-        have = 0
+        n = 0
+        for c in t:
+            if f[ord(c)] == 0:
+                n+= 1
+            f[ord(c)] += 1
+
         l = 0
-        ms = ""
-        ml = 99999999999999999999
-        for r in range(len(s)):
-            ind_r = ord(s[r])
-            print(ind_r)
-            fs[ind_r] += 1
-            if f[ind_r] > 0 and f[ind_r] == fs[ind_r]:
-                have += 1
-            while have == need:
-                ind_l = ord(s[l])
-                if f[ind_l] > 0 and fs[ind_l] == f[ind_l]:
-                    have -= 1
-                if ml != min(ml, r-l+1):
-                        ml = r-l+1
-                        ms = s[l:r+1]
-                fs[ind_l] -= 1
+        k = 0
+        fs = [0] * 128
+        for r, c in enumerate(s):
+            fs[ord(c)] += 1
+            if fs[ord(c)] == f[ord(c)]:
+                k += 1
+
+            while k == n:
+                if r-l+1 < ml:
+                    ml = r - l + 1
+                    ms = s[l:r+1]
+                
+                fs[ord(s[l])] -= 1
+                if fs[ord(s[l])] < f[ord(s[l])]:
+                    k -= 1
+                
                 l += 1
         
         return ms
