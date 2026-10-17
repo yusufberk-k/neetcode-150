@@ -13,7 +13,9 @@ Every file starts with a status comment:
 | `looked` | Read the solution |
 
 Anything tagged `looked` or `hint` gets a retry date: 7 days after solving for
-`hint`, 3 days for `looked`. On that date I rewrite it
+`hint`, 3 days for `looked`. If a retry fails and I need help again, the
+problem is re-tagged with whatever help I needed this time, and the retry
+date becomes 14 days out. On that date I rewrite it
 from scratch without opening the file. If it passes, the tag becomes
 `solo` and the commit message says `retry passed`.
 
