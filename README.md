@@ -50,9 +50,9 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-10-11 | 424. Longest Repeating Character Replacement | `looked` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
 | 2026-10-13 | 76. Minimum Window Substring | `looked` | [sliding-window/minimum-window-substring.py](sliding-window/minimum-window-substring.py) |
 | 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
 | 2026-10-17 | 567. Permutation in String | `hint` | [sliding-window/permutation-in-string.py](sliding-window/permutation-in-string.py) |
 | 2026-10-18 | 875. Koko Eating Bananas | `looked` | [binary-search/koko-eating-bananas.py](binary-search/koko-eating-bananas.py) |
 | 2026-10-21 | 74. Search a 2D Matrix | `hint` | [binary-search/search-a-2d-matrix.py](binary-search/search-a-2d-matrix.py) |
+| 2026-10-31 | 424. Longest Repeating Character Replacement | `hint` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
