@@ -52,7 +52,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 
 | Retry date | Problem | Status | File |
 |---|---|---|---|
-| 2026-10-13 | 76. Minimum Window Substring | `looked` | [sliding-window/minimum-window-substring.py](sliding-window/minimum-window-substring.py) |
 | 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
 | 2026-10-17 | 567. Permutation in String | `hint` | [sliding-window/permutation-in-string.py](sliding-window/permutation-in-string.py) |
 | 2026-10-18 | 875. Koko Eating Bananas | `looked` | [binary-search/koko-eating-bananas.py](binary-search/koko-eating-bananas.py) |
