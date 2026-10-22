@@ -59,4 +59,5 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 | 2026-10-21 | 153. Find Minimum in Rotated Sorted Array | `looked` | [binary-search/find-minimum-in-rotated-sorted-array.py](binary-search/find-minimum-in-rotated-sorted-array.py) |
 | 2026-10-24 | 33. Search in Rotated Sorted Array | `looked` | [binary-search/search-in-rotated-sorted-array.py](binary-search/search-in-rotated-sorted-array.py) |
 | 2026-10-28 | 981. Time Based Key-Value Store | `hint` | [binary-search/time-based-key-value-store.py](binary-search/time-based-key-value-store.py) |
+| 2026-10-29 | 206. Reverse Linked List | `hint` | [linked-list/reverse-linked-list.py](linked-list/reverse-linked-list.py) |
 | 2026-10-31 | 424. Longest Repeating Character Replacement | `hint` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
