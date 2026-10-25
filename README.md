@@ -62,3 +62,4 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 | 2026-10-29 | 206. Reverse Linked List | `hint` | [linked-list/reverse-linked-list.py](linked-list/reverse-linked-list.py) |
 | 2026-10-31 | 424. Longest Repeating Character Replacement | `hint` | [sliding-window/longest-repeating-character-replacement.py](sliding-window/longest-repeating-character-replacement.py) |
 | 2026-10-31 | 21. Merge Two Sorted Lists | `hint` | [linked-list/merge-two-sorted-linked-lists.py](linked-list/merge-two-sorted-linked-lists.py) |
+| 2026-11-01 | 141. Linked List Cycle | `hint` | [linked-list/linked-list-cycle-detection.py](linked-list/linked-list-cycle-detection.py) |
