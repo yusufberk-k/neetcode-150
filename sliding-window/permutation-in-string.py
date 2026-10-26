@@ -1,36 +1,31 @@
 # Permutation in String
-# status: hint | retry: 2026-10-17
-# note: couldn't see how to hold the ascii table as a list; [0] * 128 indexed by ord(c).
-# shrink while fs[c] > f[c]; window length == len(s1) means it's a permutation
+# status: solo | retry: -
+# note: retry passed, fixed-size window of len(s1) with need/have counters.
+# have counts chars with m[c] >= mp[c]; no decrement on overshoot needed, since the window
+# is at most len(s1) long, every char at >= means every char is exactly equal.
 
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        f = [0] * 128
-
+        mp = {}
+        need = 0
+        for c in s1:
+            if c not in mp:
+                need += 1
+            mp[c] = mp.get(c, 0) + 1
+        k = len(s1)
+        
         l = 0
-
-        for i in s1:
-            f[ord(i)] += 1
-
-
-        fs = [0] * 128
+        m = {}
+        have = 0
         for r in range(len(s2)):
-            idx_r = ord(s2[r])
-            idx_l = ord(s2[l])
-            if f[idx_r] == 0:
-                fs = [0] * 128
-                l = r+1
-                continue
-
-            fs[idx_r] += 1
-
-            while fs[idx_r] > f[idx_r]:
-                fs[idx_l] -= 1
-                l += 1
-                idx_l = ord(s2[l])
-
-            if r-l+1 == len(s1):
-                return True
-
+            m[s2[r]] = m.get(s2[r], 0) + 1
+            if s2[r] in mp and m[s2[r]] == mp[s2[r]]:
+                have += 1
             
+            if r-l+1 > k:
+                if s2[l] in mp and m[s2[l]] == mp[s2[l]]:
+                    have -= 1
+                m[s2[l]] -= 1
+                l+=1
+            if have == need: return True
         return False
