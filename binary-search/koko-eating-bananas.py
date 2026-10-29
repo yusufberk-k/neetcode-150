@@ -1,24 +1,26 @@
 # Koko Eating Bananas
-# status: looked | retry: 2026-10-18
-# note: binary search on the answer (speed in 1..max(piles)), not on the array;
-# if hours <= h, save m and go left to find a smaller speed
+# status: solo | retry: -
+# note: retry passed, binary search on the answer (speed in 1..max(piles)).
+# th > h means too slow, go right; otherwise m works, save it in pa and go left for a smaller one.
 
 from math import ceil
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        from math import ceil
         
-        lo, hi = 1, max(piles)
-
-        while lo <= hi:
-            m = lo + (hi-lo)//2
-            hours = 0
+        l, hi = 1, max(piles)
+        pa = 0
+        while l <= hi:
+            m = l + (hi-l)//2
+            th = 0
             for p in piles:
-                hours += ceil(p/m)
+                th += ceil(p/m)
+            
+            if th > h:
+                l = m+1
 
-            if hours <= h:
-                hi = m-1
-                pot = m
             else: 
-                lo = m+1
-
-        return pot
+                pa = m
+                hi = m-1
+        
+        return pa
