@@ -53,7 +53,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 | Retry date | Problem | Status | File |
 |---|---|---|---|
 | 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
-| 2026-10-18 | 875. Koko Eating Bananas | `looked` | [binary-search/koko-eating-bananas.py](binary-search/koko-eating-bananas.py) |
 | 2026-10-21 | 74. Search a 2D Matrix | `hint` | [binary-search/search-a-2d-matrix.py](binary-search/search-a-2d-matrix.py) |
 | 2026-10-21 | 153. Find Minimum in Rotated Sorted Array | `looked` | [binary-search/find-minimum-in-rotated-sorted-array.py](binary-search/find-minimum-in-rotated-sorted-array.py) |
 | 2026-10-24 | 33. Search in Rotated Sorted Array | `looked` | [binary-search/search-in-rotated-sorted-array.py](binary-search/search-in-rotated-sorted-array.py) |
