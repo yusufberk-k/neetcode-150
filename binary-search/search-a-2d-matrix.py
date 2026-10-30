@@ -1,28 +1,25 @@
 # Search a 2D Matrix
-# status: hint | retry: 2026-10-21
-# note: treat matrix as one sorted array of m*n; 
-# row = mid // n, col = mid % n. first try walked rows linearly -> O(m + log n)
+# status: solo | retry: -
+# note: retry passed, treat matrix as one sorted array of rows*cols;
+# row = m // cols, col = m % cols, then plain binary search -> O(log(m*n))
 
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        l, h = 0, len(matrix[0])-1
-        print(h)
+        cols = len(matrix[0])
+        rows = len(matrix)
+        t = rows*cols
 
-        row = 0
-        while l <= h and row < len(matrix):
-            mid = l + (h-l) // 2
-            r = matrix[row]
-            if r[h] < target:
-                row += 1
-                l, h = 0, len(matrix[0])-1
-                continue
+        l, r = 0, t-1
+        while l <= r:
+            m = l + (r-l)//2
 
-            if r[mid] == target:
+            row = m//cols
+            col = m%cols
+
+            if matrix[row][col] == target:
                 return True
-
-            elif r[mid] < target: 
-                l = mid + 1
-            
-            else: 
-                h = mid - 1
+            elif matrix[row][col] > target:
+                r = m-1
+            else:
+                l = m+1
         return False
