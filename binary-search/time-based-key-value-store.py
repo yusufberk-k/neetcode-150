@@ -1,7 +1,8 @@
 # Time Based Key-Value Store
-# status: hint | retry: 2026-10-28
-# note: set timestamps are strictly increasing, so appending keeps each key's list sorted (no insort needed);
-# get = binary search for the largest timestamp <= target: save the value whenever ts < target and go right
+# status: solo | retry: -
+# note: retry passed, dict.setdefault(key, []).append(...) creates the list on first use and appends in one line;
+# set timestamps are strictly increasing so each key's list stays sorted -> get = binary search for the
+# largest ts <= target: save the value whenever mt <= target and go right, O(log n) get
 
 class TimeMap:
 
@@ -9,31 +10,23 @@ class TimeMap:
         self.keys = {}
 
     def set(self, key: str, value: str, timestamp: int) -> None:
-        self.keys[key] = self.keys.get(key, [])
-        self.keys[key].append([timestamp, value])
-
+        self.keys.setdefault(key, []).append((value, timestamp))
 
     def get(self, key: str, timestamp: int) -> str:
-        if key not in self.keys:
-            return ''
-        self.ts = self.keys[key]
-        
-        l, r = 0, len(self.ts)-1
-        
-        ans = ''
+        self.vals = self.keys.get(key, [])
+        l, r = 0, len(self.vals)-1
+
+        pa = ''
         while l <= r:
             m = l + (r-l)//2
-            self.mt = self.ts[m][0]
+            lt = self.vals[l][1]
+            mt = self.vals[m][1]
+            mv = self.vals[m][0]
 
-            
-            if self.mt == timestamp:
-                return self.ts[m][1]
-            
-            elif self.mt < timestamp:
-                ans = self.ts[m][1]
+            if mt <= timestamp:
+                pa = mv
                 l = m+1
             
-            else: 
+            else:
                 r = m-1
-            
-        return ans
+        return pa
