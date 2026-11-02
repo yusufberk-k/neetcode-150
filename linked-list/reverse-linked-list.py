@@ -1,7 +1,7 @@
 # Reverse Linked List
-# status: hint | retry: 2026-10-29
-# note: first linked list problem; had to learn what a linked list is. iterative: save nxt = cur.next,
-# point cur.next back to prev, step prev/cur forward; prev is the new head when cur hits None
+# status: solo | retry: -
+# note: retry passed, iterative: save nxt = cur.next, point cur.next back to prev, step prev/cur forward;
+# prev is the new head when cur hits None, O(n) time O(1) space
 
 # Definition for singly-linked list.
 # class ListNode:
