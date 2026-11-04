@@ -53,6 +53,6 @@ Sorted by date. A row is removed when the retry passes and the tag becomes `solo
 | Retry date | Problem | Status | File |
 |---|---|---|---|
 | 2026-10-14 | 239. Sliding Window Maximum | `looked` | [sliding-window/sliding-window-maximum.py](sliding-window/sliding-window-maximum.py) |
-| 2026-10-31 | 21. Merge Two Sorted Lists | `hint` | [linked-list/merge-two-sorted-linked-lists.py](linked-list/merge-two-sorted-linked-lists.py) |
 | 2026-11-01 | 141. Linked List Cycle | `hint` | [linked-list/linked-list-cycle-detection.py](linked-list/linked-list-cycle-detection.py) |
 | 2026-11-14 | 153. Find Minimum in Rotated Sorted Array | `hint` | [binary-search/find-minimum-in-rotated-sorted-array.py](binary-search/find-minimum-in-rotated-sorted-array.py) |
+| 2026-11-18 | 21. Merge Two Sorted Lists | `looked` | [linked-list/merge-two-sorted-linked-lists.py](linked-list/merge-two-sorted-linked-lists.py) |
